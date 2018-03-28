@@ -1,0 +1,13 @@
+.jumbotron {
+    background: greenyellow;
+    font-family: comic 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva, Verdana, sans-serif';
+    font-weight: bold;
+    color: black;
+}
+
+#submit {
+    background: greenyellow;
+    color: black;
+    font-size: 12px;
+    text-align: center;
+}
