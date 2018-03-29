@@ -17,12 +17,12 @@
    <div class="jumbotron">
         <h1 class="text-center">Let's Play Animal Trivia!</h1>
     </div>
-  
+
  <!-- Section for Instructions -->
 <div class = "container">
     <p> <strong>Instructions:</strong></p>
     <p> You are given a set of questions. </p>
-    <p> You have 30s to complete the quiz.</p>
+    <p> You have 30s to answer each question in the quiz.</p>
     <p> When <strong>TIME RUNS OUT</strong> the quiz is over and you'll find out how many you answered correctly / incorrectly.</p>
     <p> Good luck!!</p>
     </div>
@@ -33,25 +33,22 @@
             <div class="row">
 
 <!-- Questions Panel -->
-    <div class="col-lg-6">
+    <div class="col-lg-12">
          <div class="card">
              <h3 class="card-header">Quiz</h3>
                 <div class="row">
-                    <div class="col m4 offset-m5 question">
-                    <button class="waves-effect waves-light btn-large startButton">Start Game!</button>
+                    <div class="col-lg-12 question">
+                    <button class="waves-effect waves-light btn-large startButton" id="start">Start Game!</button>
                     </div>
 
-                    <div class="row">
-                        <div class="col m4 offset-m5 timer">
-                        </div>
-                    </div>
+                    <div class="col-lg-4 timer"></div>
                 </div>
-                        
+
                 <div class="row">
-                    <div class="col m4 offset-m5 answers">
+                    <div class="col-lg-4 answers">
                     </div>
                  </div>
-                        
+
                 <div class="row">
                     <div class="col m2 offset-m1">
                         <button class="waves-effect waves-light btn answerchoice" id="buttonA">A</button>
@@ -69,18 +66,18 @@
                         <button class="waves-effect waves-light btn answerchoice" id="buttonD">D</button>
                     </div>
                 </div>
-                            
+
 <!-- Results -->
     <div class="row">
         <div class="col m4 offset-m5 alert">
         </div>
-     </div>
     </div>
-</div>                    
 </div>
-</div>  
-  
+</div>
+</div>
+</div>
+
 </body>
-<!-- Link to JS file --> 
+<!-- Link to JS file -->
 <script type="text/javascript" src="assets/javascript/app.js"></script>
 </html>

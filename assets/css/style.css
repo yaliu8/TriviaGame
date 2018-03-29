@@ -1,13 +1,54 @@
 .jumbotron {
-    background: greenyellow;
+    background: lightseagreen;
     font-family: comic 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva, Verdana, sans-serif';
     font-weight: bold;
-    color: black;
+    color: whitesmoke;
+}
+
+.card-header{
+    text-align: center;
 }
 
 #submit {
-    background: greenyellow;
+    background: lightseagreen;
     color: black;
     font-size: 12px;
     text-align: center;
 }
+
+.btn{
+display: none;
+}
+
+.question{
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.timer{
+    margin-left: 10px;
+    text-align: left;
+    font-size: 5px;
+    font-style: italic;
+    color: blue;
+}
+
+#buttonA,#buttonB,#buttonC,#buttonD{
+    font-weight:bold;
+}
+#start{
+    margin-left: 43%;
+    text-align: center;
+    background-color: lightseagreen;
+    color: white;
+    font-style: bold;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+#start a{
+    color: white;
+    text-decoration: none;
+}
+

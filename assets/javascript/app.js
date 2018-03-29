@@ -1,7 +1,7 @@
 $(document).ready(function() {
     var index = 0;
     var countdownTimer = {
-      time: 20,
+      time: 0,
       reset: function() {
         this.time = 30;
         $('.timer').html('<h3>' + this.time + ' seconds remaining</h3>');
@@ -30,6 +30,7 @@ $(document).ready(function() {
         }
       }
     };
+
   var correct = 0;
   var wrong = 0;
   var q1 = {
@@ -41,7 +42,7 @@ $(document).ready(function() {
     flags : [true, false, false, false],
     answer : 'A. Hummingbirds'
   };
-  
+
   var q2 = {
     question : 'What dog breed native to Japan has a name that translates to "little brushwood dog"?',
     possibleAnswers : ['A. Himachi',
@@ -51,7 +52,7 @@ $(document).ready(function() {
     flags : [false, false, true, false],
     answer : 'C. Shiba Inu'
   };
-  
+
   var q3 = {
     question : 'What breed of horse is best known for its use in racing?',
     possibleAnswers : ['A. Palomino',
@@ -91,9 +92,9 @@ $(document).ready(function() {
     flags : [true, false, false, false],
     answer : 'A. Copper'
   };
-  
+
   var questionArray = [q1, q2,q3,q4,q5,q6];
-  
+
   function loadQuestion(questionSelection) {
     console.log(questionSelection);
     countdownTimer.reset();
@@ -103,7 +104,7 @@ $(document).ready(function() {
     $("#buttonC").text(questionArray[questionSelection].possibleAnswers[2]).show();
     $("#buttonD").text(questionArray[questionSelection].possibleAnswers[3]).show();
   }
-  
+
   function setup() {
     index = 0;
     $('.startButton').on('click', function() {
@@ -112,9 +113,9 @@ $(document).ready(function() {
       loadQuestion(index);
     });
   }
-  
+
   function getAnswer() {
-  
+
     $('.answerchoice').on('click', function() {
       console.log('alert', index);
       index++;
@@ -127,29 +128,29 @@ $(document).ready(function() {
       loadQuestion();
     })
   }
-  
+
   function answerCorrect() {
     correct++;
-  
-    $(".alert").html('correct!!!');
+
+    $(".alert").html('<h3>Correct!</h3>' + '<br><img src="https://media1.giphy.com/media/l49JHLpRSLhecYEmI/giphy-downsized.gif">');
   }
-  
+
   function answerWrong() {
     wrong++;
     console.log("wrong");
-    $(".alert").html('incorrect!!!');
-  
+    $(".alert").html('<h3>Incorrect!</h3>' +" The correct answer is " + questionArray[index].answer + '<br><img src="https://78.media.tumblr.com/368d89af7f369de7050e7f82bc602474/tumblr_otz9h74UV41vw8qgmo1_500.gif">');
   }
-  
+
   function showScore() {
     $('.question').empty();
-    $('.question').append("<h2><p>" + correct + " correct</p></h2>");
-    $('.question').append("<h2><p>" + wrong + " incorrect</p></h2>");
+    $('.question').append("<h2><p>" + correct + " Correct</p></h2>");
+    $('.question').append("<h2><p>" + wrong + " Incorrect</p></h2>" );
+    $('.question').append('<a href="javascript:location.reload(true)"><button id= "start"> Restart</button></a>');
     countdownTimer.stop();
     $('.timer').empty();
-  
+
   }
-  
+
   setup();
   $('.answerchoice').on('click', function() {
    console.log($(this));
@@ -182,7 +183,7 @@ $(document).ready(function() {
    } else if (answerChosen == 'D') {
     answerWrong();
    }
-  
+
    $(".question").text('');
    $("#buttonA").text('');
    $("#buttonB").text('');
@@ -196,8 +197,9 @@ $(document).ready(function() {
     showScore();
    }
   });
-  
+
     $('.carousel.carousel-slider').carousel({fullWidth: true});
-  
+    function myFunction() {
+    location.reload();
+}
   });
-  
