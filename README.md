@@ -1,5 +1,7 @@
 # TriviaGame
 
+Deployed: https://yaliu8.github.io/TriviaGame/
+
 Objective of game:
  * User is given a trivia form of questions with multiple choice answer options.
  * User has a limited amount of time to answer as many questions as possible on the quiz.
@@ -10,8 +12,8 @@ Objective of game:
  
  Dependencies
  - Bootstrap
- -CSS
+ - CSS
  - HTML
- -Javascript
+ - Javascript
 
 
